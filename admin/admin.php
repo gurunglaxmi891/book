@@ -24,17 +24,22 @@
         <div class="sidebar-brand">
             <h2><span class="las">Read-Recycle</span></h2>
         </div>
+        <?php
+            
+        ?>
 
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <img src="" alt="prifile pic">
+                    <img src="" alt="prfile pic">
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">upload image</a>
+                    <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload Picture</a>
+                   
+                    
 
                 </li>
-
+                
                 <li>
                     <a href="admin.html" class="text-decoration-none">Admin info</a>
 

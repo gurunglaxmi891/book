@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/loginpage.css">
 
-<!-- below link is to connect bootstrap with our file. some of the bootstrap is being used here.    -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- below link is to connect bootstrap with our file. some of the bootstrap is being used here.    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Log in</title>
@@ -19,7 +20,7 @@
 
 <body>
     <div class="wrapper">
-        
+
         <div class="close">
             <i class="fa fa-close" onclick="closePopup()"></i>
         </div>
@@ -36,12 +37,12 @@
                       if($email=="" || $password=="")
                       {
                         ?>
-                              <!-- below div is one of the component of bootstrap -->
-                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>Fill the required details to login</strong>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                        <?php
+            <!-- below div is one of the component of bootstrap -->
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Fill the required details to login</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                       }
                       else
                       {
@@ -50,11 +51,11 @@
                           if($result)
                           {
                                ?>
-                                   <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     <strong>query success</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                    </div> -->
-                               <?php
+            <?php
                                $row=mysqli_num_rows($result);
                                if($row==1)
                                {
@@ -81,24 +82,24 @@
                                    else
                                    {
                                       ?>
-                                      <!-- below div is one of the component of bootstrap -->
-                                         <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <!-- below div is one of the component of bootstrap -->
+            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                             <strong>data fetch failed</strong> You should check in on some of those fields below.
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                          </div> -->
-                                      <?php
+            <?php
                                    }
 
                                }
                                else
                                {
                                 ?>
-                                <!-- below div is one of the component of bootstrap -->
-                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                        <strong>Invalid Credentials</strong> You should check in on some of those fields below.
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                <?php
+            <!-- below div is one of the component of bootstrap -->
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Invalid Credentials</strong> You should check in on some of those fields below.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                                }
                                
     
@@ -106,12 +107,12 @@
                           else
                           {
                             ?>
-                            <!-- below div is one of the component of bootstrap -->
-                               <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <!-- below div is one of the component of bootstrap -->
+            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <strong>Query failed</strong> You should check in on some of those fields below.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                </div> -->
-                            <?php
+            <?php
                           }
 
                       }
@@ -175,11 +176,11 @@
                         if($username=="" || $email=="" || $password=="")
                         {
                             ?>
-                               <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <strong>Fill all the details</strong> 
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                               </div>
-                            <?php
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Fill all the details</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                         }
                         else
                         {
@@ -189,11 +190,11 @@
                             if($row==1)
                             {
                                 ?>
-                                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>username you choosed is already occupied. Select a unique username</strong>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                   </div>
-                                <?php
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>username you choosed is already occupied. Select a unique username</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                             }
                             else
                             {
@@ -202,20 +203,20 @@
                                 if($result)
                                 {
                                     ?>
-                                       <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <strong>Account created successfully.</strong>
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                       </div>
-                                    <?php
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Account created successfully.</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                                 }
                                 else
                                 {
                                     ?>
-                                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                                <strong>Unable to create account. Please try again</strong>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                             </div>
-                                    <?php
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Unable to create account. Please try again</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
                                 }
                             }
                             
@@ -255,6 +256,7 @@
         </div>
 
     </div>
+   
     <script src="../assets/js/script.js"></script>
     <!-- <script>
         function myFunction() {
@@ -268,7 +270,7 @@
         }
     </script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
-   
+
 
 </body>
 
