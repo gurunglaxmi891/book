@@ -15,6 +15,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/adminStyle.css" />
+    <style>
+        .sidebar .sidebar-menu img{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
 </head>
 
 <!-- ........................................................ -->
@@ -31,7 +40,13 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <img src="" alt="prfile pic">
+                    <?php
+                        $id = $_SESSION['id'];
+                        $sql = "SELECT * FROM user WHERE id='$id' ";
+                        $result = mysqli_query($con , $sql);
+                        $pic = mysqli_fetch_array($result);
+                    ?>
+                    <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
                 </li>
                 <li>
                     <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload Picture</a>
@@ -41,7 +56,7 @@
                 </li>
                 
                 <li>
-                    <a href="admin.html" class="text-decoration-none">Admin info</a>
+                    <a href="./admin_info.php?id=<?php echo $pic['id']; ?>" class="text-decoration-none">Admin info</a>
 
                 </li>
                 <li>
