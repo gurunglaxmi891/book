@@ -1,3 +1,8 @@
+<?php
+    require('../process/secure_admin.php');
+    require('../process/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

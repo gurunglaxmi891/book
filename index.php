@@ -21,7 +21,7 @@
               </a>
         
               <div class="col-md-3 text-end">
-                <a href="./partials/login.html" class="btn btn-outline-light me-2 small-font">Login</a>
+                <a href="./partials/login.php" class="btn btn-outline-light me-2 small-font">Login</a>
                 <a href="./partials/sign_log_in_form.html" class="btn btn-outline-light small-font">Sign Up</a>
               </div>
             </header>
