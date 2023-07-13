@@ -24,51 +24,53 @@
         <div class="sidebar-brand">
             <h2><span class="las">Read-Recycle</span></h2>
         </div>
+
         <div class="sidebar-menu">
             <ul>
                 <li>
                     <img src="" alt="prifile pic">
                 </li>
                 <li>
-                    <a href="" class="">upload image</a>
+                    <a href="" class="text-decoration-none">upload image</a>
 
                 </li>
 
                 <li>
-                    <a href="admin.html" class="">Admin info</a>
+                    <a href="admin.html" class="text-decoration-none">Admin info</a>
 
                 </li>
                 <li>
-                    <a href="admin.html" class="">Dashboard</a>
+                    <a href="admin.html" class="text-decoration-none">Dashboard</a>
 
                 </li>
 
 
                 <li>
-                    <a href="./buyer.html">Buyer-Details</a>
+                    <a href="./buyer.html" class="text-decoration-none" >Buyer-Details</a>
                 </li>
                 <li>
-                    <a href="./seller.html">Seller-Details</a>
+                    <a href="./seller.html" class="text-decoration-none">Seller-Details</a>
                 </li>
                 <li>
-                    <a href="./orders.html">Orders</a>
+                    <a href="./orders.html" class="text-decoration-none">Orders</a>
                 </li>
                 <li>
-                    <a href="./chat.html">Chats</a>
+                    <a href="./chat.html" class="text-decoration-none">Chats</a>
                 </li>
                 <li>
-                    <a href="./book_cat.html">Book Category</a>
+                    <a href="./book_cat.html" class="text-decoration-none">Book Category</a>
                 </li>
                 <li>
                     <div class="btn-main">
                         <!-- <button class="btn-button">Log Out</button> -->
-                        <a href="">Log out</a>
+                        <a href="" class="text-decoration-none">Log out</a>
 
                     </div>
                 </li>
             </ul>
         </div>
     </div>
+    
 
     <!-- .........................Top middle................................. -->
     <div class="main-content">
