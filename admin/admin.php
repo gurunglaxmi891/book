@@ -146,6 +146,7 @@
                 <table width="100%">
                   <thead> 
                     <tr>
+                      <td>SN</td>
                       <td>
                         Name
                       </td>
@@ -166,6 +167,7 @@
                   <!-- ----------------------after table heading, now table body -------------------->
                   <tbody>
                     <tr>
+                      <td>1</td>
                       <td>Laxmi</td>
                       <td>2019-02-09</td>
                       <td>
@@ -178,6 +180,7 @@
                       </div></td>
                     </tr>
                     <tr>
+                      <td>2</td>
                       <td>copt</td>
                       <td>2019-02-09</td>
                       <td>nobil@gmail.com</td>
@@ -190,6 +193,7 @@
                       
                     </tr>
                     <tr>
+                      <td>3</td>
                       <td>ushop app</td>
                       <td>2019-02-09</td>
                       <td>
@@ -202,6 +206,7 @@
                       </div></td>
                     </tr>
                     <tr>
+                      <td>4</td>
                       <td>esign</td>
                       <td>2019-02-09</td>
                       <td>
@@ -214,6 +219,7 @@
                       </div></td>
                     </tr>
                     <tr>
+                      <td>5</td>
                       <td>bent</td>
                       <td>2019-02-09</td>
                       <td>no@am</td>
@@ -225,6 +231,7 @@
                       </div></td>
                     </tr>
                     <tr>
+                      <td>6</td>
                       <td>ushop app</td>
                       <td>2019-02-09</td>
                       <td>gurunglaxmi@gmail.com
@@ -256,6 +263,7 @@
                       <table width="100%">
                         <thead> 
                           <tr>
+                            <td>SN</td>
                             <td>
                               Name
                             </td>
@@ -276,6 +284,7 @@
                         <!-- ----------------------after table heading, now table body -------------------->
                         <tbody>
                           <tr>
+                            <td>1</td>
                             <td>Laxmi</td>
                             <td>2019-02-09</td>
                             <td>
@@ -288,6 +297,7 @@
                             </div></td>
                           </tr>
                           <tr>
+                            <td>2</td>
                             <td>copt</td>
                             <td>2019-02-09</td>
                             <td>nobil@gmail.com</td>
@@ -300,6 +310,7 @@
                             
                           </tr>
                           <tr>
+                            <td>3</td>
                             <td>ushop app</td>
                             <td>2019-02-09</td>
                             <td>
@@ -312,6 +323,7 @@
                             </div></td>
                           </tr>
                           <tr>
+                            <td>4</td>
                             <td>esign</td>
                             <td>2019-02-09</td>
                             <td>
@@ -324,6 +336,7 @@
                             </div></td>
                           </tr>
                           <tr>
+                            <td>5</td>
                             <td>bent</td>
                             <td>2019-02-09</td>
                             <td>no@am</td>
@@ -335,6 +348,7 @@
                             </div></td>
                           </tr>
                           <tr>
+                            <td>6</td>
                             <td>ushop app</td>
                             <td>2019-02-09</td>
                             <td>gurunglaxmi@gmail.com
@@ -365,7 +379,7 @@
                               <tr>
                                 <td>Book-id</td>
                                 <td>
-                                  Customer-id
+                                  Buyer-id
                                 </td>
                                 <td>
                                   Ordered date

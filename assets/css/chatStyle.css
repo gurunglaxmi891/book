@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #dcf1ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width:28.125rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.125rem 0.125rem 1.25rem rgba(0,0,0,0.4);
+    background-color: dodgerblue;
+}
+
+.header h1{
+    color:white;
+    text-align: center;
+    padding: 0.938rem;
+}
+.header h2{
+    /* color:white; */
+    text-align: center;
+    padding: 0.938rem;
+}
+.body{
+    flex:1;
+    color:white;
+    background-color: rgba(0,0,0,0.7);
+    padding:1.25rem 1.875px;
+}
+.message{
+    background-color: dodgerblue;
+    padding:0.625rem ;
+    color:white;
+    width: fit-content;
+    border-radius:0.625rem;
+    margin-bottom:0.938rem ;
+    
+
+}
+
+.user_message{
+    margin-left: auto;
+    background-color: white;
+    color:black;
+}
+.footer form{
+    display: flex;
+}
+form input{
+    flex:1;
+    height: 2.5rem;
+    border:none;
+    outline:none;
+    padding-left: 0.313rem;
+    font-size: 1rem;
+}
+form button{
+    width: 6.25rem;
+    font-size: 1.125rem;
+    border:none;
+    outline:none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+
+}
+form button:hover{
+    background-color: blue;
+    transition: 0.2 ease;
+}
+
+
+
+
