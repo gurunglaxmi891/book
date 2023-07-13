@@ -138,7 +138,7 @@
                 </div>
 
 
-                <button type="submit" name="login" class="btn">LOGIN</button>
+                <button type="submit" name="login" class="btn btn-dark">LOGIN</button>
 
 
                 <p class="register">Not registered?<a href="#">Register here!</a></p>
@@ -164,9 +164,68 @@
 
         <!-- Headings for the form -->
         <div class="formregister">
+            <h3>Registration</h3>
+            <?php
+                     if(isset($_POST['create']))
+                     {
+                        $username = $_POST['username'];
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+
+                        if($username=="" || $email=="" || $password=="")
+                        {
+                            ?>
+                               <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Fill all the details</strong> 
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                               </div>
+                            <?php
+                        }
+                        else
+                        {
+                            $sql = "SELECT * FROM user WHERE username='$username' ";
+                            $result = mysqli_query($con , $sql);
+                            $row = mysqli_num_rows($result);
+                            if($row==1)
+                            {
+                                ?>
+                                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>username you choosed is already occupied. Select a unique username</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                   </div>
+                                <?php
+                            }
+                            else
+                            {
+                                $sql = "INSERT INTO user(username,gmail,password) VALUES('$username','$email','$password') ";
+                                $result = mysqli_query($con , $sql);
+                                if($result)
+                                {
+                                    ?>
+                                       <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Account created successfully.</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                       </div>
+                                    <?php
+                                }
+                                else
+                                {
+                                    ?>
+                                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                <strong>Unable to create account. Please try again</strong>
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                             </div>
+                                    <?php
+                                }
+                            }
+                            
+                            
+                        }
+
+                     }
+            ?>
             <form action="#" method="post">
 
-                <h3>Registration</h3>
                 <div class="mainContainer">
                     <input type="text" placeholder="Username" name="username">
                 </div>
@@ -186,7 +245,8 @@
                 </div>
 
 
-                <button class="btn">Register</button>
+                <!-- <button type="submit" name="register" class="btn btn-primary">Register</button> -->
+                <button type="submit" name="create" class="btn btn-primary">Register</button>
 
 
                 <p class="LOGIN">Already have an account?<a href="#">Login</a></p>
@@ -196,7 +256,7 @@
 
     </div>
     <script src="../assets/js/script.js"></script>
-    <script>
+    <!-- <script>
         function myFunction() {
             var x = document.getElementById("myInput");
             if (x.type === "password") {
@@ -206,7 +266,7 @@
                 x.type = "password";
             }
         }
-    </script>
+    </script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
    
 
