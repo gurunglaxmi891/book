@@ -63,7 +63,7 @@
                     <a href="./chat.html" class="text-decoration-none">Chats</a>
                 </li>
                 <li>
-                    <a href="./book_cat.html" class="text-decoration-none">Book Category</a>
+                    <a href="./book_cat.php" class="text-decoration-none">Book Category</a>
                 </li>
                 <li>
                     <div class="btn-main">
