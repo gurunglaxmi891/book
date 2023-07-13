@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: aliceblue; */
+    /* color: black;  */
+    
+    
+}
+
+.wrapper{
+    
+    position: relative;
+    width: 400px;
+    height: 530px;
+    background: transparent;
+    background-color: aliceblue;
+    border: 2px solid rgba(199, 84, 84, .5);
+    border-radius:10px;
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto; 
+    overflow: hidden;
+     /* transform: scale(0);  */
+    transition : height 2s ease; 
+}
+
+.active{
+    height: 450px;
+}
+
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 35px;
+    background: #162938; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .form{
+    /* width: 35rem;
+    margin: auto;
+    border-radius: 12px;
+     /* color: whitesmoke;  */
+     /* color: black;
+     backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%); 
+      border: 2px solid rgba(87, 16, 16, 0.123);
+      padding: 20px 25px; */ 
+
+      /* width: 100%;
+      padding: 40px; */
+      
+}
+h3{
+    text-align: center;
+}
+.wrapper .formlogin{
+    transition: transform .18s ease;
+    transform: translateX(0);
+} 
+
+.wrapper.active .formlogin{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .formregister{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .formregister{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+input[type=text],input[type=email], input[type=password]{
+    width:100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+button{
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* .formlogin{
+    margin: 5px;
+    text-align: center;
+} */
+
+.mainContainer{
+    padding: 1px;
+}
+
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+span.forgetpsd a{
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px; 
+} 
+
+.forgetpsd a{
+    color: rgb(99, 155, 224);
+}
+
+.forgetpsd a:link{
+    text-decoration: none;
+}
+
+.register{
+    color: black;
+    /* color: white; */
+    text-align: center;
+}
+
+.register a{
+    color: rgb(99, 155, 224);
+    /* color: rgb(74, 146, 235); */
+}
+
+.register a:link{
+    text-decoration: none;
+}
+.LOGIN{
+    color: black;
+    /* color: white; */
+    text-align: center;
+}
+
+.LOGIN a{
+    color: rgb(99, 155, 224);
+    /* color: rgb(74, 146, 235); */
+}
+
+.LOGIN a:link{
+    text-decoration: none;
+}
+
+ @media screen and (max-width: 600px){
+    form{
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    form{
+        width: 20rem;
+    }
+} 
+
+.separator{
+    width: 100%;
+    border-top: 2px solid #e8c5c5;
+    border-bottom:2px solid #e8c5c5;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+ .social-login{
+    display:flex;
+    /* width: 100px;  */
+    justify-content: center;
+} 
+
+.social-login a{
+    display: inline-block;
+    background: #F06292;
+    color: white;
+    padding: 6px;
+    margin-right: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-login a:hover{
+    background: #E91E63;
+    box-shadow: 5px 5px 5px #ccc;
+}
+.social-login a i{
+    color: white;
+    margin-right: 10px;
+}
