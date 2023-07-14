@@ -16,13 +16,13 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/adminStyle.css" />
     <style>
-        .sidebar .sidebar-menu img{
-            height: 250px;
-            width: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-        }
+    .sidebar .sidebar-menu img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
     </style>
 </head>
 
@@ -49,33 +49,34 @@
                     <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
                 </li>
                 <li>
-                    <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload Picture</a>
-                   
-                    
+                    <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload
+                        Picture</a>
+
+
 
                 </li>
-                
+
                 <li>
                     <a href="./admin_info.php?id=<?php echo $pic['id']; ?>" class="text-decoration-none">Admin info</a>
 
                 </li>
                 <li>
-                    <a href="admin.html" class="text-decoration-none">Dashboard</a>
+                    <a href="admin.php" class="text-decoration-none">Dashboard</a>
 
                 </li>
 
 
                 <li>
-                    <a href="./buyer.html" class="text-decoration-none" >Buyer-Details</a>
+                    <a href="./buyer.php" class="text-decoration-none">Buyer-Details</a>
                 </li>
                 <li>
-                    <a href="./seller.html" class="text-decoration-none">Seller-Details</a>
+                    <a href="./seller.php" class="text-decoration-none">Seller-Details</a>
                 </li>
                 <li>
-                    <a href="./orders.html" class="text-decoration-none">Orders</a>
+                    <a href="./orders.php" class="text-decoration-none">Orders</a>
                 </li>
                 <li>
-                    <a href="./chat.html" class="text-decoration-none">Chats</a>
+                    <a href="./chat.php" class="text-decoration-none">Chats</a>
                 </li>
                 <li>
                     <a href="./book_cat.php" class="text-decoration-none">Book Category</a>
@@ -101,7 +102,7 @@
             </ul>
         </div>
     </div>
-    
+
 
     <!-- .........................Top middle................................. -->
     <div class="main-content">
@@ -203,106 +204,36 @@
                                 </thead>
                                 <!-- ----------------------after table heading, now table body -------------------->
                                 <tbody>
+                                <?php
+                                    $sql = "SELECT * FROM user WHERE role='seller'";
+                                    $result = mysqli_query($con , $sql);
+                                    $sn =1;
+                                    while($data = mysqli_fetch_array($result))
+                                    {
+                                          
+                                    
+                                ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Laxmi</td>
-                                        <td>2019-02-09</td>
+                                        <td><?php echo $sn++; ?></td>
+                                        <td><?php echo $data['name']; ?></td>
+                                        <td><?php echo $data['created_at']; ?></td>
                                         <td>
-                                            gurunglaxmi@gmail.com
+                                            <?php echo $data['gmail']; ?>
                                         </td>
-                                        <td>3</td>
+                                        <td><?php echo $data['book_sold']; ?></td>
                                         <td>
                                             <div class="btn-main">
                                                 <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
+                                                 <button class="btn-button">Update</button> -->
                                                 <button class="btn btn-danger">Delete</button>
                                                 <button class="btn btn-success">Update</button>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>copt</td>
-                                        <td>2019-02-09</td>
-                                        <td>nobil@gmail.com</td>
-                                        <td>5
-                                        </td>
-                                        <td>
-                                            <div class="btn-main">
-                                                <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
-                                                <button class="btn btn-success">Update</button>
-                                            </div>
-                                        </td>
+                                    <?php
+                                    }
+                                    ?>
 
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>ushop app</td>
-                                        <td>2019-02-09</td>
-                                        <td>
-                                            gurunglaxmi@gmail.com
-                                        </td>
-                                        <td>8</td>
-                                        <td>
-                                            <div class="btn-main">
-                                                <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
-                                                <button class="btn btn-success">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>esign</td>
-                                        <td>2019-02-09</td>
-                                        <td>
-                                            gurunglaxmi@gmail.com
-                                        </td>
-                                        <td>9</td>
-                                        <td>
-                                            <div class="btn-main">
-                                                <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
-                                                <button class="btn btn-success">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>bent</td>
-                                        <td>2019-02-09</td>
-                                        <td>no@am</td>
-
-                                        <td>5</td>
-                                        <td>
-                                            <div class="btn-main">
-                                                <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
-                                                <button class="btn btn-success">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>ushop app</td>
-                                        <td>2019-02-09</td>
-                                        <td>gurunglaxmi@gmail.com
-                                        </td>
-                                        <td>7</td>
-                                        <td>
-                                            <div class="btn-main">
-                                                <!-- <button class="btn-button">Delete</button>
-                        <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
-                                                <button class="btn btn-success">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -344,48 +275,23 @@
                                     </thead>
                                     <!-- ----------------------after table heading, now table body -------------------->
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Laxmi</td>
-                                            <td>2019-02-09</td>
-                                            <td>
-                                                gurunglaxmi@gmail.com
-                                            </td>
-                                            <td>3</td>
-                                            <td>
-                                                <div class="btn-main">
-                                                    <!-- <button class="btn-button">Delete</button>
-                              <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
-                                                    <button class="btn btn-success">Update</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>copt</td>
-                                            <td>2019-02-09</td>
-                                            <td>nobil@gmail.com</td>
-                                            <td>5
-                                            </td>
-                                            <td>
-                                                <div class="btn-main">
-                                                    <!-- <button class="btn-button">Delete</button>
-                              <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
-                                                    <button class="btn btn-success">Update</button>
-                                                </div>
-                                            </td>
+                                    <?php
+                                         $sql = "SELECT * FROM user WHERE role='user' ";
+                                         $result = mysqli_query($con , $sql);
+                                         $incre = 1;
+                                         while($row = mysqli_fetch_array($result))
+                                         {
 
-                                        </tr>
+                                         
+                                    ?>
                                         <tr>
-                                            <td>3</td>
-                                            <td>ushop app</td>
-                                            <td>2019-02-09</td>
+                                            <td><?php echo $incre++; ?></td>
+                                            <td><?php echo $row['name']; ?></td>
+                                            <td><?php echo $row['created_at']; ?></td>
                                             <td>
-                                                gurunglaxmi@gmail.com
+                                            <?php echo $row['gmail']; ?>
                                             </td>
-                                            <td>8</td>
+                                            <td><?php echo $row['book_buy']; ?></td>
                                             <td>
                                                 <div class="btn-main">
                                                     <!-- <button class="btn-button">Delete</button>
@@ -395,55 +301,10 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>esign</td>
-                                            <td>2019-02-09</td>
-                                            <td>
-                                                gurunglaxmi@gmail.com
-                                            </td>
-                                            <td>9</td>
-                                            <td>
-                                                <div class="btn-main">
-                                                    <!-- <button class="btn-button">Delete</button>
-                              <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
-                                                    <button class="btn btn-success">Update</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>bent</td>
-                                            <td>2019-02-09</td>
-                                            <td>no@am</td>
-
-                                            <td>5</td>
-                                            <td>
-                                                <div class="btn-main">
-                                                    <!-- <button class="btn-button">Delete</button>
-                              <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
-                                                    <button class="btn btn-success">Update</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>ushop app</td>
-                                            <td>2019-02-09</td>
-                                            <td>gurunglaxmi@gmail.com
-                                            </td>
-                                            <td>7</td>
-                                            <td>
-                                                <div class="btn-main">
-                                                    <!-- <button class="btn-button">Delete</button>
-                              <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
-                                                    <button class="btn btn-success">Update</button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                         }
+                                        ?>
+                                        
                                     </tbody>
                                 </table>
                             </div>
