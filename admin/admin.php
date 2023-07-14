@@ -90,7 +90,7 @@
                             unset($_SESSION['email']);
                             unset($_SESSION['username']);
                             // header("Refresh:1 , url=../index.php");
-                            header('Location:../index.php');
+                            header('Location:../partials/login.php');
                           }
                     ?>
                     <div class="btn-main">
