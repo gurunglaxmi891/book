@@ -15,10 +15,12 @@
     <nav class="header-navbar bg-dark">
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3  border-bottom ">
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-2 text-white">Read Recycle</span>
-              </a>
+             <span> <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                 <video autoplay controls loop  width="150px">
+                    <source src="./animation.mp4">
+                </video> 
+                    </a></span>
+                    <span class="fs-2 text-white me-auto">Read Recycle</span>
         
               <div class="col-md-3 text-end">
                 <a href="./partials/login.php" class="btn btn-outline-light me-2 small-font">Login</a>
@@ -39,7 +41,7 @@
                     <div class="collapse navbar-collapse navbar-dark" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-white small-font" aria-current="page" href="#">Categories</a>
+                                <a class="nav-link active text-white small-font" aria-current="page" href="./admin/book_cat.php">Categories</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white small-font" href="#">About Us</a>

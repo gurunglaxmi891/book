@@ -77,7 +77,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About End</p> -->
-                        <a class="small-font btn" href="">Add to Cart</a>
+                        <a class="small-font btn" href="./book_page.html">Add to Cart</a>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Zombie</p> -->
-                        <a class="small-font btn" href="">Add to Cart</a>
+                        <a class="small-font btn" href="./book_page.html">Add to Cart</a>
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Regret</p> -->
-                        <a class="small-font btn" href="">Add to Cart</a>
+                        <a class="small-font btn" href="./book_page.html">Add to Cart</a>
                     </div>
                 </div>
 
@@ -107,7 +107,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Love</p> -->
-                        <a class="small-font btn" href="">Add to Cart</a>
+                        <a class="small-font btn" href="./book_page.html">Add to Cart</a>
                     </div>
                 </div>
 

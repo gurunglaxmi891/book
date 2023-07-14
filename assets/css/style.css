@@ -21,6 +21,8 @@ body{
 }
 
 
+
+
 /* ===================Section-navbar styling========================= */
  .navbar a:hover{
    border-bottom: 2px solid #fff;
@@ -87,6 +89,7 @@ section.header-content-section{
     object-fit: cover;
     object-position: center;
 }
+
 
 /* =========================books-list styling=============================== */
 .books{
