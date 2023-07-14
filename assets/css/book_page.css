@@ -1,0 +1,13 @@
+.right {
+    background-color: whitesmoke;
+    display: inline-block;
+    width: 50%;
+    height: 90vh;
+  }
+  .left {
+    height: 60vh;
+    background-color: whitesmoke;
+    display: inline-block;
+    width: 50%;
+    height: 90vh;
+  }
