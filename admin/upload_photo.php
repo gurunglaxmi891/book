@@ -45,7 +45,7 @@
                         $result = mysqli_query($con , $sql);
                         $pic = mysqli_fetch_array($result);
                     ?>
-                    <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
+                    <img src="../upload-image/<?php echo $pic['image']; ?>" class="img-fluid" alt="profile pic">
                 </li>
                 <li>
                     <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload
