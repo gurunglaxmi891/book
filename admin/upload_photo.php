@@ -18,8 +18,8 @@
     <title>Title</title>
     <style>
         .sidebar .sidebar-menu img{
-            height: 250px;
-            width: 250px;
+            height: 8.313rem;
+            width: 10.875rem;
             border-radius: 50%;
             object-fit: cover;
             object-position: center;

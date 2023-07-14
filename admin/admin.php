@@ -13,12 +13,13 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> 
+
     <link rel="stylesheet" href="../assets/css/adminStyle.css" />
     <style>
     .sidebar .sidebar-menu img {
-        height: 250px;
-        width: 250px;
+        height: 8.313rem;
+        width: 10.875rem;
         border-radius: 50%;
         object-fit: cover;
         object-position: center;
@@ -46,7 +47,7 @@
                         $result = mysqli_query($con , $sql);
                         $pic = mysqli_fetch_array($result);
                     ?>
-                    <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
+                    <img src="../upload-image/<?php echo $pic['image']; ?>" class="img-fluid" alt="profile pic">
                 </li>
                 <li>
                     <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload
