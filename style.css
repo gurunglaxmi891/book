@@ -20,7 +20,8 @@ ul{
 .footer h4{
    display: inline-block;
    font-weight: 500;
-   color:#fff
+   color:#fff;
+}
 
 /* .footer-col ul li a{
           font-size: 16 px;
