@@ -204,7 +204,7 @@
                                                                     {
                                                                         ?>
                                                                           <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                                            <strong>Image uploaded successfully.</strong></strong> You should check in on some of those fields below.
+                                                                            <strong>Image uploaded successfully.</strong></strong> 
                                                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                                                           </div>
                                                                         <?php

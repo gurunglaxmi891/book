@@ -34,10 +34,15 @@
                 </div>
                 <div class="user-wrapper col-md-4">
                     <!-- <img src="pic1.png" width="40px" alt="pic"> -->
-
+                    <?php 
+                         $id = $_SESSION['id'];
+                         $sql = "SELECT * FROM user WHERE id='$id'";
+                         $result = mysqli_query($con , $sql);
+                         $data = mysqli_fetch_array($result);
+                    ?>
                     <div class="col-md-4 ms-auto">
-                        <h4>Shova</h4>
-                        <small>Admin</small>
+                        <h4><?php echo $data['name']; ?></h4>
+                        <small class="text-light">Admin</small>
                     </div>
                 </div>
             </div>
@@ -58,8 +63,8 @@
         <div class="seller">
             <div class="card1">
                 <div class="card1-header">
-                    <h3>Seller-Details</h3>
-                    <button>See all <span class="las la-arrow-right"></span></button>
+                    <h3 class="m-3">Seller-Details</h3>
+                    <button class="m-3">See all <span class="las la-arrow-right"></span></button>
                 </div>
                 <div class="card1-body">
                     <table width="100%">
@@ -105,7 +110,7 @@
                                     <div class="btn-main">
                                         <!-- <button class="btn-button">Delete</button>
                                                  <button class="btn-button">Update</button> -->
-                                        <button class="btn btn-danger">Delete</button>
+                                        <a href="./delete_seller.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this <?php echo $data['role']; ?> account')">Delete</a>
                                         <button class="btn btn-success">Update</button>
                                     </div>
                                 </td>
@@ -115,6 +120,7 @@
                                     ?>
                         </tbody>
                     </table>
+                    <a href="./admin.php" class="btn btn-primary m-3">Back</a>
                 </div>
 
             </div>

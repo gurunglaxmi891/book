@@ -105,8 +105,15 @@
                 </div>
                 <div class="user-wrapper">
     
-                    <div>
-                        <h4>Shova</h4>
+                <?php 
+                         $id = $_SESSION['id'];
+                         $sql = "SELECT * FROM user WHERE id='$id'";
+                         $result = mysqli_query($con , $sql);
+                         $data = mysqli_fetch_array($result);
+                    ?>
+                    <div class="col-md-4 ">
+                        <h4><?php echo $data['name']; ?></h4>
+                        <small class="text-light">Admin</small>
                     </div>
                 </div>
             </header>

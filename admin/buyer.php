@@ -41,9 +41,15 @@
                 <div class="user-wrapper col-md-4">
                     <!-- <img src="pic1.png" width="40px" alt="pic"> -->
 
+                    <?php 
+                         $id = $_SESSION['id'];
+                         $sql = "SELECT * FROM user WHERE id='$id'";
+                         $result = mysqli_query($con , $sql);
+                         $data = mysqli_fetch_array($result);
+                    ?>
                     <div class="col-md-4 ms-auto">
-                        <h4>Shova</h4>
-                        <small>Admin</small>
+                        <h4><?php echo $data['name']; ?></h4>
+                        <small class="text-light">Admin</small>
                     </div>
                 </div>
 
@@ -61,8 +67,8 @@
         <div class="buyer">
             <div class="card2">
                 <div class="card2-header">
-                    <h3>Buyer-Details</h3>
-                    <button>See all <span class="las la-arrow-right"></span></button>
+                    <h3 class="m-3">Buyer-Details</h3>
+                    <button class="m-3">See all <span class="las la-arrow-right"></span></button>
                 </div>
                 <div class="card2-body">
                     <table width="100%">
@@ -109,7 +115,7 @@
                                     <div class="btn-main">
                                         <!-- <button class="btn-button">Delete</button>
                               <button class="btn-button">Update</button> -->
-                                        <button class="btn btn-danger">Delete</button>
+                                        <a href="./delete_buyer.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this <?php echo $row['role']; ?> account')">Delete</a>
                                         <button class="btn btn-success">Update</button>
                                     </div>
                                 </td>
@@ -118,7 +124,8 @@
                                     }
                                   ?>
                         </tbody>
-                    </table>
+                      </table>
+                      <a href="./admin.php" class="btn btn-primary m-3">Back</a>
                 </div>
 
             </div>

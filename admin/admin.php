@@ -118,21 +118,33 @@
                 <input type="Search" placeholder="Search Here" />
             </div>
             <div class="user-wrapper">
-                <img src="pic1.png" width="40px" alt="pic">
+                <!-- <img src="pic1.png" width="40px" alt="pic"> -->
 
-                <div>
-                    <h4>Shova</h4>
-                    <small>Admin</small>
-                </div>
+                <?php 
+                         $id = $_SESSION['id'];
+                         $sql = "SELECT * FROM user WHERE id='$id'";
+                         $result = mysqli_query($con , $sql);
+                         $data = mysqli_fetch_array($result);
+                    ?>
+                    <div class="col-md-4">
+                        <h4><?php echo $data['name']; ?></h4>
+                        <small class="text-light">Admin</small>
+                    </div>
             </div>
         </header>
 
         <!-- .......................Top below middle.......................... -->
         <main>
             <div class="cards">
+                <?php
+                   $query = "SELECT * FROM user WHERE NOT role='admin'";
+                   $result = mysqli_query($con , $query) ;
+                   $count = mysqli_num_rows($result);
+                   
+                ?>
                 <div class="card-single">
                     <div>
-                        <h1>54</h1>
+                        <h1><?php echo $count; ?></h1>
                         <span>Visitors</span>
                     </div>
                     <div>
@@ -142,12 +154,26 @@
 
                 <div class="card-single">
                     <div>
-                        <h1>54</h1>
+                    <?php
+                       $sql = "SELECT * FROM user WHERE role='user' ";
+                       $result = mysqli_query($con , $sql);
+                       $count2 = 0;
+                       while($row=mysqli_fetch_array($result))
+                       {
+                           $count2 = $count2 + $row['book_buy'];
+                       }
+                    ?>
+                        <h1>
+                            <?php 
+                                 echo $count2;      
+                            ?>
+                        </h1>
                         <span>Sales</span>
                     </div>
                     <div>
                         <span class="las la-clipboard"></span>
                     </div>
+                    
                 </div>
 
                 <div class="card-single">
@@ -225,7 +251,7 @@
                                             <div class="btn-main">
                                                 <!-- <button class="btn-button">Delete</button>
                                                  <button class="btn-button">Update</button> -->
-                                                <button class="btn btn-danger">Delete</button>
+                                                 <a href="./delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this <?php echo $data['role']; ?> account')">Delete</a>
                                                 <button class="btn btn-success">Update</button>
                                             </div>
                                         </td>
@@ -296,7 +322,7 @@
                                                 <div class="btn-main">
                                                     <!-- <button class="btn-button">Delete</button>
                               <button class="btn-button">Update</button> -->
-                                                    <button class="btn btn-danger">Delete</button>
+                                                  <a href="./delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this <?php echo $row['role']; ?> account')">Delete</a>
                                                     <button class="btn btn-success">Update</button>
                                                 </div>
                                             </td>

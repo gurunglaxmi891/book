@@ -1,3 +1,8 @@
+<?php
+   require('../process/secure_admin.php');
+   require('../process/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,10 +34,16 @@
         <div class="user-wrapper">
             <!-- <img src="pic1.png" width="40px" alt="pic"> -->
   
-            <div class="col-md-4 ms-auto">
-                <h4>Shova</h4>
-                <small>Admin</small>
-            </div>
+            <?php 
+                         $id = $_SESSION['id'];
+                         $sql = "SELECT * FROM user WHERE id='$id'";
+                         $result = mysqli_query($con , $sql);
+                         $data = mysqli_fetch_array($result);
+                    ?>
+                    <div class="col-md-4 ms-auto">
+                        <h4><?php echo $data['name']; ?></h4>
+                        <small class="text-light">Admin</small>
+                    </div>
         </div>
         </div>
         
@@ -49,8 +60,8 @@
           <div class="orders">
             <div class="card3">
               <div class="card3-header">
-                <h3>Orders</h3>
-                <button>See all <span class="las la-arrow-right"></span></button>
+                <h3 class="m-3">Orders</h3>
+                <button class="m-3">See all <span class="las la-arrow-right"></span></button>
               </div>
               <div class="card3-body">
                 <table width="100%">
@@ -165,6 +176,7 @@
                     </tr>
                   </tbody>
                 </table>
+                <a href="./admin.php" class="btn btn-primary m-3">Back</a>
               </div>
               
             </div>
