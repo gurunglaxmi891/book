@@ -81,9 +81,20 @@
                     <a href="./book_cat.php" class="text-decoration-none">Book Category</a>
                 </li>
                 <li>
+                    <?php
+                          if(isset($_GET['id']))
+                          {
+                            unset($_SESSION['id']);
+                            unset($_SESSION['role']);
+                            unset($_SESSION['email']);
+                            unset($_SESSION['username']);
+                            // header("Refresh:1 , url=../index.php");
+                            header('Location:../index.php');
+                          }
+                    ?>
                     <div class="btn-main">
                         <!-- <button class="btn-button">Log Out</button> -->
-                        <a href="" class="text-decoration-none">Log out</a>
+                        <a href="?id=<?php echo $id; ?>" class="text-decoration-none">Log out</a>
 
                     </div>
                 </li>
