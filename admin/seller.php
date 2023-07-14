@@ -71,6 +71,9 @@
                         <thead>
                             <tr>
                                 <td>
+                                    S.N
+                                </td>
+                                <td>
                                     Name
                                 </td>
                                 <td>

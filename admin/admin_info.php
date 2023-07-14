@@ -66,16 +66,16 @@
 
 
                 <li>
-                    <a href="./buyer.html" class="text-decoration-none">Buyer-Details</a>
+                    <a href="./buyer.php" class="text-decoration-none">Buyer-Details</a>
                 </li>
                 <li>
-                    <a href="./seller.html" class="text-decoration-none">Seller-Details</a>
+                    <a href="./seller.php" class="text-decoration-none">Seller-Details</a>
                 </li>
                 <li>
-                    <a href="./orders.html" class="text-decoration-none">Orders</a>
+                    <a href="./orders.php" class="text-decoration-none">Orders</a>
                 </li>
                 <li>
-                    <a href="./chat.html" class="text-decoration-none">Chats</a>
+                    <a href="./chat.php" class="text-decoration-none">Chats</a>
                 </li>
                 <li>
                     <a href="./book_cat.php" class="text-decoration-none">Book Category</a>
