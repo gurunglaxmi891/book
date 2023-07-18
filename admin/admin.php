@@ -83,6 +83,9 @@
                     <a href="./book_cat.php" class="text-decoration-none">Book Category</a>
                 </li>
                 <li>
+                    <a href="./message.php" class="text-decoration-none">Messages</a>
+                </li>
+                <li>
                     <?php
                           if(isset($_GET['id']))
                           {

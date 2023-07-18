@@ -4,7 +4,7 @@
           box-sizing: border-box;
 }
 body{
-          background-color: black;
+          background-color: white;
 }
 body, input, textarea, a{
           font-family: 'Courier New', Courier, monospace;
@@ -127,7 +127,7 @@ body, input, textarea, a{
 .form-fields .form-group:last-child{
           width: 96%;
 }
-.submit-button{
+.btn{
           width: 96%;
           height: 60px;
           margin: 0px 12px;
@@ -143,7 +143,7 @@ body, input, textarea, a{
           box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
           transition: .5s;
 }
-.submit-button:hover{
+.btn:hover{
           background: #31279d;
 }
 /* Responsive css */
@@ -169,10 +169,10 @@ body, input, textarea, a{
           margin: 25px 0px;
  }
  .form-fields.form-group:last-child,
- .submit-button{
+ .btn{
           width: 100%;
  }
- .submit-button{
+ .btn{
           margin: 10px 0px;
  }
 }
