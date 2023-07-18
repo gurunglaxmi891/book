@@ -15,11 +15,11 @@
     <nav class="header-navbar bg-dark">
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3  border-bottom ">
-             <span> <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+             <!-- <span> <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                  <video autoplay controls loop  width="150px">
                     <source src="./animation.mp4">
                 </video> 
-                    </a></span>
+                    </a></span> -->
                     <span class="fs-2 text-white me-auto">Read Recycle</span>
         
               <div class="col-md-3 text-end">
@@ -44,10 +44,10 @@
                                 <a class="nav-link active text-white small-font" aria-current="page" href="./admin/book_cat.php">Categories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white small-font" href="#">About Us</a>
+                                <a class="nav-link text-white small-font" href="./contactus.html">Contact Us</a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link text-white small-font" href="#">Blog</a>
+                                <a class="nav-link text-white small-font" href="./blog.html">Blog</a>
                             </li> 
                             <li class="nav-item">
                                 <a class="nav-link text-white small-font" href="#">Help</a>
