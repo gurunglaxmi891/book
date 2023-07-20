@@ -1,87 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="paymentmethod.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <link rel="stylesheet" href="paymentmethod.css">
-</head>
+  <body>
+    <div class="wrapper">
+      <h2>Complete Your Order</h2>
+      <h4>Fill your details</h4>
+      <form action="" method="POST">
+        <!-- Account Information Start -->
 
-<body>
-  <div class="wrapper">
-    <h2>Complete Your Order</h2>
-    <h4>Fill your details</h4>
-    <form action="" method="POST">
-      <!-- Account Information Start -->
-
-      <h4>Account</h4>
-      <div class="input_group">
-        <div class="input_box">
-          <input type="text" placeholder="Full Name" required class="name">
-
+        <h4>Account</h4>
+        <div class="input_group">
+          <div class="input_box">
+            <input type="text" placeholder="Full Name" required class="name" />
+          </div>
         </div>
-      </div>
 
-      <div class="input_group">
-
-        <div class="input_box">
-          <input type="Email" placeholder="Your Email Address" required class="name">
-
+        <div class="input_group">
+          <div class="input_box">
+            <input
+              type="Email"
+              placeholder="Your Email Address"
+              required
+              class="name"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="input_group">
-        <div class="input_box">
-          <input type="text" placeholder="Address" required class="name">
-
+        <div class="input_group">
+          <div class="input_box">
+            <input type="text" placeholder="Address" required class="name" />
+          </div>
         </div>
-      </div>
 
-      <div class="input_group">
-        <div class="input_box">
-          <input type="text" placeholder="Contact Number" required class="name">
+
+
+        <div class="input_group">
+          <div class="input_box">
+            <input
+              type="text"
+              placeholder="Contact Number"
+              required
+              class="name"
+            />
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
-  <br> <br>
-  <div class="container">
-    <div class="title">
-      <h4>Select a <span style="color:skyblue">Payment</span> method</h4>
+      </form>
     </div>
-    <form action="#">
+    <br />
+    <br />
 
-      <div class="category">
-        <input type="radio" name="payment" id="e-sewa">
-        <label for="e-sewa" class="esewaMethod">
-          <div class="imgName">
-            <div class="imgContainer esewa">
-              <img src="logo-esewa.jpg" alt="online payment">
-
-            </div>
-            <span class="name">E-sewa</span>
-          </div>
-          <span class="check"><i class=" fa-solid fa-circle-check" style="color:#6064b6"></i></span>
-        </label>
+    <div class="container">
+      <div class="title">
+        <h4>Select a <span style="color: skyblue">Payment</span> method</h4>
       </div>
-      <div class="category">
-        <input type="radio" name="payment" id="CashonDelivery">
-        <label for="CashonDelivery" class="CashonDeliveryMethod">
-          <div class="imgName">
-            <div class="imgContainer cash">
-              <img src="cashondelivery.jpg" alt="online payment">
-
+      <form action="#">
+        <div class="category">
+          <input type="radio" name="payment" id="e-sewa" />
+          <label for="e-sewa" class="esewaMethod">
+            <div class="imgName">
+              <div class="imgContainer esewa">
+                <img src="logo-esewa.jpg" alt="online payment" />
+              </div>
+              <span class="name">E-sewa</span>
             </div>
-            <span class="name">Cash on Delivery</span>
-          </div>
-          <span class="check"><i class=" fa-solid fa-circle-check" style="color:#6064b6"></i></span>
-        </label>
-      </div>
-    </form>
-  </div>
-</body>
+            <span class="check"
+              ><i class="fa-solid fa-circle-check" style="color: #6064b6"></i
+            ></span>
+          </label>
+        </div>
 
+
+        <div class="category">
+          <input type="radio" name="payment" id="CashonDelivery" />
+          <label for="CashonDelivery" class="CashonDeliveryMethod">
+            <div class="imgName">
+              <div class="imgContainer cash">
+                <img src="cashondelivery.jpg" alt="online payment" />
+              </div>
+              <span class="name">Cash on Delivery</span>
+            </div>
+            <span class="check"
+              ><i class="fa-solid fa-circle-check" style="color: #6064b6"></i
+            ></span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

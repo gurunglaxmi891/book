@@ -13,7 +13,7 @@ LOGIN.addEventListener('click', ()=>{
 
 closeBtn.addEventListener("click",()=>{
     console.log("clicked");
-    window.location.replace("/")
+    window.location.replace("http://localhost/books/index.php")
 })
 
 
@@ -26,5 +26,3 @@ function myFunction() {
         x.type = "password";
     }
 }
-
-

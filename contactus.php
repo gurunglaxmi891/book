@@ -47,13 +47,13 @@ else{
 
                     <li>
                         <i class="fas fa-globe"></i>
-                        <span>Website: </span><a href="https://readrecycle.com">readrecycle.com</a>
+                        <span>Website: </span><a href="index.php">readrecycle.com</a>
                     </li>
 
                 </ul>
                 <ul class="social-icons">
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/readrecyclebooks">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </li>

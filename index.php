@@ -7,7 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/1a937f0349.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/footerStyle.css">
+
+
+    <!-- for incons -->
+    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 
@@ -27,6 +31,9 @@
                 <div class="col-md-3 text-end">
                     <a href="./partials/login.php" class="btn btn-outline-light me-2 small-font">Login</a>
                     <a href="./partials/sign_log_in_form.html" class="btn btn-outline-light small-font">Sign Up</a>
+                    <a href="./partials/sign_log_in_form.html" class="btn  small-font">
+                        <i class="fa-solid fa-cart-plus fa-2x"></i>
+                    </a>
                 </div>
             </header>
         </div>
@@ -49,10 +56,10 @@
                                 href="./admin/book_cat.php">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white small-font" href="#">About Us</a>
+                            <a class="nav-link text-white small-font" href="./contactus.php">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white small-font" href="./blog.html">Blog</a>
+                            <a class="nav-link text-white small-font" href="./blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white small-font" href="#">Help</a>
@@ -237,7 +244,7 @@
     </section>
 
     <!-- ===========================contect us-------------------  -->
-    <section id="contact-us">
+    <!-- <section id="contact-us">
         <div class="container contact-container">
 
             <div class="img-container">
@@ -253,9 +260,9 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- ==============footer=================== -->
-    <footer id="book-footer">
+    <!-- <footer id="book-footer">
         <div class="container">
             <p>Book Website &copy; 2023, All rights reserved.</p>
             <div class="footer-icon">
@@ -264,7 +271,42 @@
                 <i class="fa-brands fa-twitter fa-3x"></i>
             </div>
         </div>
+    </footer> -->
+    <footer class="footer">
+        <div class="container">
+            <h2>Why to Choose Us?</h2>
+            <br><br>
+            <div class="conatiner">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Lowest Price</h4>
+                        <p>We continuously make effort to make every book's price lowest for our
+                            valuable customer</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Fastest Delivery</h4>
+                        <p>All the orders placed will be delivered within 48 hours.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Best Customer Service</h4>
+                        <p>Our customer service is dedicated to providing you with the best possible
+                            experience. We are available to answer any questions or concerns you may have.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Flexible Exchange Policy</h4>
+                        <p>Customers can make exchange upto 7 days from the day of purchase and a full
+                            refund within 15 days.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
     </footer>
+
 
 
 

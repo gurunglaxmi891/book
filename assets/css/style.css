@@ -283,3 +283,7 @@ section.header-content-section{
 .footer-icon i.middle{
     margin: 0 1rem;
 }
+/* =====================================Cart styling=================================== */
+nav i{
+    color: #fff!important;
+}
