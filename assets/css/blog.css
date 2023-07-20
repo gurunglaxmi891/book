@@ -1,0 +1,76 @@
+*{
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: thistle;
+          
+}
+body{
+          margin: 0px;
+          padding: 0;
+}
+.container{
+          width: 75%;
+          margin: 75px auto;
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-gap: 25px;
+}
+.content{
+          display: flex;
+          justify-content: centre;
+          
+          align-items: centre;
+          flex-direction: column;
+          padding: 40px;
+         
+}
+
+
+.card{
+          box-shadow: 0px 4px 8px 0px rgba(0,0,0,0,4);
+}
+ 
+.header h1{
+          color: navy;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card h3{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size:x-large;
+          color: teal;
+          font-weight: 400;
+}
+.card h4{
+          font-family:serif;
+          font-weight: 100;
+          color:saddlebrown;
+}
+p{
+          font-size: small;
+}
+.card h6{
+          font-family:serif;
+}
+.content a{
+          font-family: sans-serif;
+          text-decoration: none;
+          font-size: 16px;
+          color: #222;
+          letter-spacing: 2px;
+          display: inline-block;
+          background-color: #d6c954;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+}
+.content a:hover{
+          background-color: #87803d;
+          transition: 1s ease;
+}
+@media screen and (max-width: 768px) {
+          .content{
+                    flex-direction: column;
+          }
+}

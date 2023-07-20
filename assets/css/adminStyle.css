@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 
 :root{
-    --main-color:#5313a6;
+    --main-color:#120522;
     --color-dark:#d7a2a7;
     --text-purple:#4c09f3;
 }
@@ -18,7 +18,7 @@
 }
 
 .las{
-    color: rgb(229, 229, 238);
+    color: rgb(40, 31, 31);
 }
 
 
@@ -60,14 +60,14 @@
     left:0;
     top:0;
     height:100%;
-    background: #632aae;
+    background: #dee2e6;
     z-index: 100%;
 }
 
 .sidebar-brand{
     height: 5.625rem;
     padding:1rem 0rem 1rem 2rem;
-    color: #fff;
+    color:rgb(40, 31, 31) ;
 }
 
 .sidebar-brand span{
@@ -87,7 +87,7 @@
 .sidebar-menu a{
     padding-left: 1rem;
    display: block; 
-   color:#fff;
+   color:rgb(40, 31, 31);
    font-size: 1.1rem;
 }
 
@@ -109,10 +109,10 @@
 
 header{
     display: flex;
-    background-color:rgb(102, 102, 173); 
+    background-color:#f0f0f0; 
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0.125rem 0.125rem 0.313rem rgba(0,0,0,0.2);
     /* position: absolute;  
     left: 600px;  */
     /* width: calc(100%-345px); */
@@ -121,7 +121,7 @@ header{
 }
 
 header h2{
-    color:white;
+    color:rgb(40, 31, 31);
 }
 
 header label-span{
@@ -167,13 +167,13 @@ header label-span{
 
 .user-wrapper h4{
     margin-bottom: 0rem !important ;
-    color:white;
+    color:rgb(40, 31, 31);
 }
 
 .user-wrapper small{
     display: inline-block;
-    color:var(--text-purple);
-    margin-top: -10px !important;
+    color:rgb(40, 31, 31);
+    margin-top: -0.625rem !important;
 }
 
 main{
@@ -194,9 +194,9 @@ main{
 .card-single{
     display: flex;
     justify-content: space-between;
-    background: #c1b4bb;
+    background: #ebeef3;
     padding: 2rem;
-    border-radius: 2px;
+    border-radius: 0.125rem;
 
 }
 
@@ -231,50 +231,50 @@ main{
 }
 
 .card1,  .card1-body{
-    background: #c9ccdb;
-    border-radius: 5px;
+    background:#ebe3e35e ;
+    border-radius: 0.313rem;
 }
 .card2,.card2-body{
-    background: #d4ded9;
-    border-radius: 5px;
+    background: #ebe3e35e;
+    border-radius: 0.313rem;
 }
 
 .card3,.card3-body{
-    background: rgb(213, 242, 241);
-    border-radius: 5px;
+    background: #ebe3e35e;
+    border-radius: 0.313rem;
 }
 
 .card1-header, .card2-header, .card3-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 0.063rem solid #f0f0f0;
 
 }
 
 .card1-header button{
-    background:var(--main-color);
+    background:#f0f0f0;
     border-radius: 10px;
-    color:rgb(246, 238, 238);
+    color:rgb(18 17 18);
     font-size: .8rem;
     padding:.5rem 1rem;
-    border: 1px solid var(--main-color);
+    border: 0.063rem solid #dee2e6;
 }
 .card2-header button{
-    background:var(--main-color);
+    background:#f0f0f0;
     border-radius: 10px;
-    color:rgb(245, 238, 238);
+    color:rgb(18 17 18);
     font-size: .8rem;
     padding:.5rem 1rem;
-    border: 1px solid var(--main-color);
+    border: 0.063rem solid #dee2e6;
 }
 .card3-header button{
-    background:var(--main-color);
-    border-radius: 10px;
-    color:rgb(244, 236, 236);
+    background:#f0f0f0;
+    border-radius: 0.625rem;
+    color:rgb(18 17 18);
     font-size: .8rem;
     padding:.5rem 1rem;
-    border: 1px solid var(--main-color);
+    border: 0.063rem solid #dee2e6;
 }
 
 table{
@@ -282,8 +282,8 @@ table{
 }
 
 thead tr{
-    border-top:1px solid #f0f0f0;
-    border-bottom:2px solid #f0f0f0;
+    border-top:0.063rem solid #f0f0f0;
+    border-bottom:0.125rem solid #f0f0f0;
     
 }
 

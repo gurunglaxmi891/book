@@ -1,5 +1,4 @@
 <?php
-
    require('../process/secure_admin.php');
    require('../process/config.php');
 ?>
@@ -18,8 +17,8 @@
     <title>Title</title>
     <style>
         .sidebar .sidebar-menu img{
-            height: 250px;
-            width: 250px;
+            height: 8.313rem;
+            width: 10.875rem;
             border-radius: 50%;
             object-fit: cover;
             object-position: center;
@@ -45,10 +44,10 @@
                         $result = mysqli_query($con , $sql);
                         $pic = mysqli_fetch_array($result);
                     ?>
-                    <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
+                    <img src="../upload-image/<?php echo $pic['image']; ?>" class="img-fluid" alt="profile pic">
                 </li>
                 <li>
-                    <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload
+                    <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>"  class="text-decoration-none">Upload
                         Picture</a>
 
 
@@ -60,7 +59,7 @@
 
                 </li>
                 <li>
-                    <a href="admin.php" class="text-decoration-none">Dashboard</a>
+                    <a href="./admin.php" class="text-decoration-none">Dashboard</a>
 
                 </li>
 
@@ -163,14 +162,14 @@
                                         $sql = "UPDATE user SET name='$name',gmail='$email',password='$password',username='$username' WHERE id='$id' ";
                                         $result = mysqli_query($con , $sql);
                                         if($result)
-                                        {
-                                            ?>
+                                        {?>
                                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                <strong>Your personal data is updated successfully</strong>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                               </div>
-                                            <?php
-                                            // header('Refresh:2 , url=')
+                                                   <strong>Your personal data is updated successfully</strong>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <script>window.location.href="./admin.php"</script>
+                                                <?php 
+                                                // echo header("Refresh:1 , url=./admin_info.php");
                                         }
                                     }
                                   }
@@ -208,7 +207,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-    </script>
+    </scrip>
 </body>
 
 </html>

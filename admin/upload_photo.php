@@ -18,8 +18,8 @@
     <title>Title</title>
     <style>
         .sidebar .sidebar-menu img{
-            height: 250px;
-            width: 250px;
+            height: 8.313rem;
+            width: 10.875rem;
             border-radius: 50%;
             object-fit: cover;
             object-position: center;
@@ -45,7 +45,7 @@
                         $result = mysqli_query($con , $sql);
                         $pic = mysqli_fetch_array($result);
                     ?>
-                    <img src="../upload-image/<?php echo $pic['image']; ?>" alt="prfile pic">
+                    <img src="../upload-image/<?php echo $pic['image']; ?>" class="img-fluid" alt="profile pic">
                 </li>
                 <li>
                     <a href="./upload_photo.php?id=<?php echo $_SESSION['id']; ?>" class="text-decoration-none">Upload

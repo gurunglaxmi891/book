@@ -257,7 +257,7 @@
 
     </div>
    
-    <script src="../assets/js/script.js"></script>
+    <script src="../script.js"></script>
     <!-- <script>
         function myFunction() {
             var x = document.getElementById("myInput");
