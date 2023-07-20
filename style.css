@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 62.5%;
+}
+
+/* ======================utility-classes============================ */
+.medium-font{
+    font-size: 1.4rem;
+}
+.small-font{
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+.big-font{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+
+
+
+/* ===================Section-navbar styling========================= */
+ .navbar a:hover{
+   border-bottom: 2px solid #fff;
+   padding-bottom: 0px;
+}
+ .header-navbar{
+    position: fixed;
+    z-index: 55;
+    opacity: 0.8;
+    width: 100%;
+}
+
+section.header-content-section{
+    /* background-image: url("./img/joanna-kosinska-1_CMoFsPfso-unsplash.jpg"); */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, rgba(0,212,255,1) 100%);
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+/* ===================================Why US Styling======================== */
+#about-us{
+    background-color:#f5f5f7;
+    padding: 6rem 0;
+}
+.about-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.about-us-content , .about-us-image{
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}
+.about-us-content p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #666;
+}
+.about-us-content h3{
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.about-us-content h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.about-us-image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================books-list styling=============================== */
+.books{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    padding: 6rem 0;
+}
+.books h2 ,.books p{
+    text-align: center;
+}
+.books h2{
+    font-size: 3rem;
+}
+.book-collection{
+    /* border: 4px solid white; */
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-item{
+    /* width: 50%; */
+    /* border: 4px solid black; */
+    position: relative;
+    flex: 1 1 60rem;
+    margin: 1rem;
+}
+.book-item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.714);
+    opacity: 0;
+}
+.book-item:hover::after{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.book-image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    height: 30rem;
+}
+.book-content{
+    /* border: 4px solid yellow; */
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    transform: translate(50%,50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 3;
+}
+.book-item:hover .book-content{
+    bottom: 50%;
+    opacity: 1;
+}
+.book-content .det{
+    text-decoration: none;
+    color: none;
+    font-size: 1.5rem;
+    background: none;
+    transition: all 0.8s ease-in-out;
+}
+.book-content a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.0rem;
+    background-color: rgba(34, 9, 102, 0.719);
+    transition: all 0.8s ease-in-out;
+}
+.book-content p{
+    font-size: 2.0rem;
+}
+.book-content .det:hover{
+    background: none;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.94);
+}
+.book-content a:hover{
+    background-color: rgb(5, 15, 84);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.94);
+}
+
+/* =======================testimonial styling=========================== */
+#testimonial{
+    padding: 6rem 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, rgba(0,212,255,1) 100%);
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.testimonial-image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+#testimonial h2{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem;
+    font-size: 2.2rem;
+}
+.review{
+    text-align: center;
+    padding: 1rem;
+}
+.testimonial-content h3{
+    color: #fff;
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.testimonial-content p{
+    font-size: 1.0rem;
+    color: #fff;
+}
+/* ======================contact-styling=================== */
+#contact-us{
+    padding: 6rem;
+    background-color: #ece8e8;;
+}
+.contact-container{
+   display: flex;
+   /* height: 60rem; */
+   /* border: 4px solid green; */
+}
+.img-container{
+    width: 50%;
+    /* border: 4px solid red; */
+    /* padding: 1rem; */
+    /* height: 100%; */
+}
+.img-container img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.contact-details{
+    /* border: 4px solid orange; */
+    width: 50%;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+.contact-details h2{
+    font-size: 2.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+.contact-details input{
+    display: block;
+    width: 100%;
+    font-size: 1.0rem;
+    padding: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #555;
+    outline: none;
+}
+.contact-details textarea{
+    display: block;
+    width: 100%;
+    font-size: 1.0rem;
+    padding: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #555;
+    outline: none;
+}
+/* ==============================footer-styling=================== */
+#book-footer{
+    padding: 4rem;
+    /* background-color: rgb(12, 12, 73); */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, rgba(0,212,255,1) 100%);
+}
+#book-footer .container{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#book-footer p{
+    font-size: 1.2rem;
+}
+.footer-icon i.middle{
+    margin: 0 1rem;
+}
