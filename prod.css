@@ -82,6 +82,7 @@ section.header-content-section{
 }
 .book .bookimage{
     width:50%;
+    margin: auto;
 }
 .book .bookcontent{
     width:50%;

@@ -1,3 +1,6 @@
+<?php
+   require("./process/config.php")
+?>
 <!doctype html>
 <html lang="en">
 
@@ -101,107 +104,93 @@
 
         </div>
     </section>
+
+    <?php
+        $sql = "SELECT * FROM category";
+        $result = mysqli_query($con , $sql);
+        if($result)
+        {
+              
+        
+    ?>
     <!--=================  Types of books ======================= -->
     <section id="book-section" class="books">
         <!-- =================first-row for books================== -->
         <div class="container">
+
+        
             <h2>Books</h2>
             <p class="medium-font">Some of the popular books availabe in our store are give below.</p>
 
             <div class="book-collection">
+                        <?php
+                            // while($data = mysqli_fetch_array($result))
+                            while($data = mysqli_fetch_array($result))
+                            {
+                                if($data['id']<=4)
+                                {
 
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/its ends with us.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./end1.html">Book About End</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/thisishowyouheal.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./heal.html">Book About Healing</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/book2 (2).jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./regret.html">Book About Regret</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/ugly love.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./love.html">Book About Love</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
+                                            
+                        ?>
+                                        <div class="book-item">
+                                            <div class="book-image">
+                                                <img src="./img/cover<?php echo $data['id']; ?>.jpg" alt="">
+                                            </div>
+                                            <div class="book-content">
+                                            <a class="det" href="./all_books.php?id=<?php echo $data['id']; ?>">Explore</a>
+                                                <a class="small-font btn" href="">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                        
+                            <?php
+                                       if($data['id']==4)
+                                       {
+                                           break;
+                                       }
+                                }
+                                
+                            }
+                            
+                            ?>
 
             </div>
         </div>
+
         <!-- ===================Second row for books========================= -->
         <div class="container">
 
-            <div class="book-collection">
+        <div class="book-collection">
+                        <?php
+                            while($data = mysqli_fetch_array($result))
+                            {
+                                if($data['id']<=8 && $data['id']>4)
+                                {
 
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/a good girls guides to muder.jpg" alt="">
-                    </div>
-
-                    <div class="book-content">
-                        <a class="det" href="./guide1.html">Book About A guide to murder</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/everything is fucked.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <a class="det" href="./hope1.html">Book About Hope</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/mindset.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./mindset.html">Book About Mindset</a>
-                        <a class="small-font btn" href="../cart.html">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="./img/remainder of him.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                    <a class="det" href="./reminder.html">Book About Reminders</a>
-                        <a class="small-font btn" href="">Add to Cart</a>
-                    </div>
-                </div>
+                                            
+                        ?>
+                                        <div class="book-item">
+                                            <div class="book-image">
+                                                <img src="./img/cover<?php echo $data['id']; ?>.jpg" alt="">
+                                            </div>
+                                            <div class="book-content">
+                                            <a class="det" href="./all_books.php?id=<?php echo $data['id']; ?>">Explore </a>
+                                                <a class="small-font btn" href="">Add to Cart</a>
+                                            </div>
+                                        </div>
+                            <?php
+                                }
+                            }
+                            
+                            ?>
 
             </div>
         </div>
 
     </section>
+   <?php
+        }
+   ?>
+
 
     <!-- ========================Testimonials========================= -->
     <section id="testimonial">

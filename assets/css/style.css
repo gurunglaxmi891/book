@@ -163,6 +163,7 @@ section.header-content-section{
     text-decoration: none;
     color: #fff;
     font-size: 2.0rem;
+    /* margin-bottom: 1rem; */
     background-color: rgba(34, 9, 102, 0.719);
     transition: all 0.8s ease-in-out;
 }
