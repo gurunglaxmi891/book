@@ -213,7 +213,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About End</p> -->
-                        <a class="small-font btn" href="">View</a>
+                        <a class="small-font btn" href="">Add to cart</a>
                     </div>
                 </div>
 
@@ -223,7 +223,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Zombie</p> -->
-                        <a class="small-font btn" href="">View</a>
+                        <a class="small-font btn" href="">Add to cart</a>
                     </div>
                 </div>
 
@@ -233,7 +233,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Regret</p> -->
-                        <a class="small-font btn" href="">View</a>
+                        <a class="small-font btn" href="">Add to cart</a>
                     </div>
                 </div>
 
@@ -243,7 +243,7 @@
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About Love</p> -->
-                        <a class="small-font btn" href="">View</a>
+                        <a class="small-font btn" href="">Add to cart</a>
                     </div>
                 </div>
 
