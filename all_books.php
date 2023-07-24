@@ -145,7 +145,7 @@
                 <div class="purchase-info">
                     <input type="number" min="0" value="1">
                     <button type="button" class="btnn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    <button type="button" class="btnn">Buy Now</button>
+                    <button type="button" class="btnn"><a href="./payment.html">Buy Now</a></button>
                 </div>
                 <div class="book-detail">
 

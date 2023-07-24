@@ -200,6 +200,10 @@ h5{
 .purchase-info .btnn:hover{
     opacity: 0.9;
 }
+.purchase-info button a{
+    color: #fff;
+    text-decoration: none;
+}
 
 
 /* ========================================== footer ========================================================== */
