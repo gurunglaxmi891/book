@@ -1,5 +1,5 @@
 <?php
-    require('../process/config.php');
+require('../process/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,96 +29,80 @@
         <div class="formlogin">
 
             <?php
-                 if(isset($_POST['login']))
-                 {
-                      $email = $_POST['email'];
-                      $password = $_POST['password'];
+            if (isset($_POST['login'])) {
+                $email = $_POST['email'];
+                $password = $_POST['password'];
 
-                      if($email=="" || $password=="")
-                      {
+                if ($email == "" || $password == "") {
+                    ?>
+                    <!-- below div is one of the component of bootstrap -->
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Fill the required details to login</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php
+                } else {
+                    $sql = "SELECT * FROM user WHERE gmail='$email' AND password='$password' ";
+                    $result = mysqli_query($con, $sql);
+                    if ($result) {
                         ?>
-            <!-- below div is one of the component of bootstrap -->
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Fill the required details to login</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                      }
-                      else
-                      {
-                          $sql = "SELECT * FROM user WHERE gmail='$email' AND password='$password' ";
-                          $result = mysqli_query($con , $sql);
-                          if($result)
-                          {
-                               ?>
-            <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     <strong>query success</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                    </div> -->
-            <?php
-                               $row=mysqli_num_rows($result);
-                               if($row==1)
-                               {
-                                   if($data = mysqli_fetch_array($result))
-                                   {
-                                       if($data['gmail']==$email && $data['password']==$password && $data['role']=='admin')
-                                       {
-                                             session_start();
-                                               $_SESSION['id'] = $data['id'];
-                                               $_SESSION['email'] = $data['gmail'];
-                                               $_SESSION['role'] = $data['role'];
-                                               header('Refresh:1 , url=../admin/admin.php');
-                                       }
-                                       else if($data['gmail']==$email && $data['password']==$password && $data['role']=='user')
-                                       {
-                                             session_start();
-                                               $_SESSION['id'] = $data['id'];
-                                               $_SESSION['email'] = $data['gmail'];
-                                               $_SESSION['role'] = $data['role'];
-                                               header('Refresh:1 , url=../user/user.html');
-                                       }
-    
-                                   }
-                                   else
-                                   {
-                                      ?>
-            <!-- below div is one of the component of bootstrap -->
-            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <?php
+                            $row = mysqli_num_rows($result);
+                            if ($row == 1) {
+                                if ($data = mysqli_fetch_array($result)) {
+                                    if ($data['gmail'] == $email && $data['password'] == $password && $data['role'] == 'admin') {
+                                        session_start();
+                                        $_SESSION['id'] = $data['id'];
+                                        $_SESSION['email'] = $data['gmail'];
+                                        $_SESSION['role'] = $data['role'];
+                                        header('Refresh:1 , url=../admin/admin.php');
+                                    } else if ($data['gmail'] == $email && $data['password'] == $password && $data['role'] == 'user') {
+                                        session_start();
+                                        $_SESSION['id'] = $data['id'];
+                                        $_SESSION['email'] = $data['gmail'];
+                                        $_SESSION['role'] = $data['role'];
+                                        header('Refresh:1 , url=../user/user.html');
+                                    }
+
+                                } else {
+                                    ?>
+                                    <!-- below div is one of the component of bootstrap -->
+                                    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                             <strong>data fetch failed</strong> You should check in on some of those fields below.
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                          </div> -->
-            <?php
-                                   }
+                                    <?php
+                                }
 
-                               }
-                               else
-                               {
+                            } else {
                                 ?>
-            <!-- below div is one of the component of bootstrap -->
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Invalid Credentials</strong> You should check in on some of those fields below.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                               }
-                               
-    
-                          }
-                          else
-                          {
-                            ?>
-            <!-- below div is one of the component of bootstrap -->
-            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <!-- below div is one of the component of bootstrap -->
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Invalid Credentials</strong> You should check in on some of those fields below.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <?php
+                            }
+
+
+                    } else {
+                        ?>
+                            <!-- below div is one of the component of bootstrap -->
+                            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <strong>Query failed</strong> You should check in on some of those fields below.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                </div> -->
-            <?php
-                          }
+                            <?php
+                    }
 
-                      }
+                }
 
 
-                 }
+            }
             ?>
             <h3>Log in</h3>
             <form action="#" method="post">
@@ -167,63 +151,53 @@
         <div class="formregister">
             <h3>Registration</h3>
             <?php
-                     if(isset($_POST['create']))
-                     {
-                        $username = $_POST['username'];
-                        $email = $_POST['email'];
-                        $password = $_POST['password'];
+            if (isset($_POST['create'])) {
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
 
-                        if($username=="" || $email=="" || $password=="")
-                        {
+                if ($username == "" || $email == "" || $password == "") {
+                    ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Fill all the details</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php
+                } else {
+                    $sql = "SELECT * FROM user WHERE username='$username' ";
+                    $result = mysqli_query($con, $sql);
+                    $row = mysqli_num_rows($result);
+                    if ($row == 1) {
+                        ?>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>username you choosed is already occupied. Select a unique username</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <?php
+                    } else {
+                        $sql = "INSERT INTO user(username,gmail,password) VALUES('$username','$email','$password') ";
+                        $result = mysqli_query($con, $sql);
+                        if ($result) {
                             ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Fill all the details</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Account created successfully.</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    <?php
+                        } else {
+                            ?>
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                            <strong>Unable to create account. Please try again</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        <?php
                         }
-                        else
-                        {
-                            $sql = "SELECT * FROM user WHERE username='$username' ";
-                            $result = mysqli_query($con , $sql);
-                            $row = mysqli_num_rows($result);
-                            if($row==1)
-                            {
-                                ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>username you choosed is already occupied. Select a unique username</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                            }
-                            else
-                            {
-                                $sql = "INSERT INTO user(username,gmail,password) VALUES('$username','$email','$password') ";
-                                $result = mysqli_query($con , $sql);
-                                if($result)
-                                {
-                                    ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Account created successfully.</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                                }
-                                else
-                                {
-                                    ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Unable to create account. Please try again</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-                                }
-                            }
-                            
-                            
-                        }
+                    }
 
-                     }
+
+                }
+
+            }
             ?>
             <form action="#" method="post">
 
@@ -256,7 +230,7 @@
         </div>
 
     </div>
-   
+
     <script src="../script.js"></script>
     <!-- <script>
         function myFunction() {
