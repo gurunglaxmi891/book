@@ -1,5 +1,5 @@
 <?php
-      
+      require('../process/config.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -73,75 +73,34 @@
             <!-- <p class="medium-font">Some of the popular books availabe in our store are give below.</p> -->
 
             <div class="book-collection">
+            <?php
+                $sql = "SELECT * FROM category WHERE type='fiction'";
+                $result = mysqli_query($con , $sql);
+                if($result)
+                {
+                   while($data = mysqli_fetch_array($result))
+                   {       
+            ?>
 
                 <div class="book-item">
                     <div class="book-image">
-                        <img src="../img/its ends with us.jpg" alt="">
+                        <img src="../img/<?php echo $data['image']; ?>" alt="">
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About End</p> -->
-                        <a class="small-font btn" href="../end1.html">View</a>
+                        <a class="small-font btn" href="../all_books.php?id=<?php echo $data['id']; ?>">View</a>
 
                     </div>
                 </div>
 
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/a good girls guides to muder.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Zombie</p> -->
-                        <a class="small-font btn" href="../guide1.html">View</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/regretting you.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Regret</p> -->
-                        <a class="small-font btn" href="../regret.html">View</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/ugly love.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Love</p>  -->
-                        <a class="small-font btn" href="../love.html">View</a>
-
-                    </div>
-                </div>
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/remainder of him.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Love</p>  -->
-                         <a class="small-font btn" href="../reminder.html">View</a>
-
-                    </div>
-                </div>
-            </div>
+                
+            <?php
+                   }
+                }
+            ?>
             </div>
         </div>
-        <!-- <div class="container">
-            <div class="book-collection">
-            <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/remainder of him.jpg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-<p class="small-font">Book About Love</p>  -->
-                        <!-- <a class="small-font btn" href="../reminder.html">View</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>  -->
+        
     </section>
 
 
@@ -153,47 +112,27 @@
             <!-- <p class="medium-font">Some of the popular books availabe in our store are give below.</p> -->
 
             <div class="book-collection">
-
+         <?php
+             $sql = "SELECT * FROM category WHERE type='non-fiction' ";
+             $result = mysqli_query($con , $sql);
+             if($result)
+             {
+                while($data = mysqli_fetch_array($result))
+                {
+         ?>
                 <div class="book-item">
                     <div class="book-image">
-                        <img src="../img/the mountain is you.jpeg" alt="">
+                        <img src="../img/<?php echo $data['image']; ?>" alt="">
                     </div>
                     <div class="book-content">
                         <!-- <p class="small-font">Book About End</p> -->
-                        <a class="small-font btn" href="../mountain.html">View</a>
+                        <a class="small-font btn" href="../all_books.php?id=<?php echo $data['id']; ?>">View</a>
                     </div>
                 </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/mindset.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Zombie</p> -->
-                        <a class="small-font btn" href="../mindset.html">View</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/everything is fucked.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Regret</p> -->
-                        <a class="small-font btn" href="../hope1.html">View</a>
-                    </div>
-                </div>
-
-                <div class="book-item">
-                    <div class="book-image">
-                        <img src="../img/thisishowyouheal.jpeg" alt="">
-                    </div>
-                    <div class="book-content">
-                        <!-- <p class="small-font">Book About Love</p> -->
-                        <a class="small-font btn" href="../heal.html">View</a>
-                    </div>
-                </div>
-
+                <?php
+                }
+             }
+                ?>
             </div>
         </div>
     </section>
