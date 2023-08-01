@@ -145,7 +145,7 @@
                 <div class="purchase-info">
                     <input type="number" min="0" value="1">
                     <button type="button" class="btnn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    <button type="button" class="btnn"><a href="./payment.html">Buy Now</a></button>
+                    <button type="button" class="btnn"><a href="./payment.php?id=<?php echo $data['id']; ?>&price=<?php echo $data['price']; ?>&book_name=<?php echo $data['book_name']; ?>">Buy Now</a></button>
                 </div>
                 <div class="book-detail">
 
@@ -220,6 +220,9 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 
 </body>
 
