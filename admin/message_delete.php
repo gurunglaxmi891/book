@@ -4,7 +4,7 @@ error_reporting(0);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "message";
+$dbname = "book";
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 if($conn){
     //echo "Connection ok";
@@ -14,7 +14,7 @@ else{
 }
 
 $id=$_GET['id'];
-$query = "DELETE FROM view WHERE sn='$id'";
+$query = "DELETE FROM message_view WHERE sn='$id'";
 $data=mysqli_query($conn,$query);
 
 if($data)

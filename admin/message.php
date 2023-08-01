@@ -3,7 +3,7 @@
    $servername = "localhost";
    $username = "root";
    $password = "";
-   $dbname = "message";
+   $dbname = "book";
    $conn = mysqli_connect($servername,$username,$password,$dbname);
    if($conn){
        //echo "Connection ok";
@@ -28,7 +28,7 @@
     <div class="container">
 
 <?php
-$query="SELECT * FROM view";
+$query="SELECT * FROM message_view";
 $data=mysqli_query($conn,$query);
 $total=mysqli_num_rows($data);
 

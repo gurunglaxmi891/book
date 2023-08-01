@@ -3,7 +3,7 @@ error_reporting(0);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "message";
+$dbname = "book";
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 if($conn){
     //echo "Connection ok";
@@ -105,7 +105,7 @@ if($_POST['send'])
     $phone   =$_POST['phone'];
     $message =$_POST['message'];
 
-        $query="INSERT INTO view(fname,lname,email,phone,message) VALUES('$fname','$lname','$email','$phone','$message')";
+        $query="INSERT INTO message_view(fname,lname,email,phone,message) VALUES('$fname','$lname','$email','$phone','$message')";
         $data = mysqli_query($conn,$query);
         if($data)
         {
