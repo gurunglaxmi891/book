@@ -117,8 +117,8 @@
           <input value="0" name="pdc" type="hidden">
           <input value="EPAYTEST" name="scd" type="hidden">
           <input value="<?php echo $id ?>" name="pid" type="hidden">
-          <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
-          <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
+          <input value="http://localhost/clone/book/payment_success.php" type="hidden" name="su">
+          <input value="http://localhost/clone/book/payment_failed.php" type="hidden" name="fu">
           
           <!-- <input type="radio" name="payment" id="e-sewa" /> -->
           <!-- <input value="Pay online using esewa" type="submit"> -->
