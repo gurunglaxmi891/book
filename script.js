@@ -13,7 +13,7 @@ LOGIN.addEventListener('click', ()=>{
 
 closeBtn.addEventListener("click",()=>{
     console.log("clicked");
-    window.location.replace("http://localhost/books/index.php")
+    window.location.replace("http://localhost/clone/book/index.php")
 })
 
 
