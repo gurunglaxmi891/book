@@ -36,7 +36,7 @@
 
         <nav class="navbar main-navbar navbar-expand-lg navbar-dark container">
             <div class="container-fluid">
-                <a class="navbar-brand text-white small-font" href="#">Home</a>
+                <a class="navbar-brand text-white small-font" href="./index.php">Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
                             <a class="nav-link text-white small-font" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white small-font" href="./blog.html">Blog</a>
+                            <a class="nav-link text-white small-font" href="./blog.php">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white small-font" href="#">Help</a>

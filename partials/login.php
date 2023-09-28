@@ -65,7 +65,7 @@ require('../process/config.php');
                                         $_SESSION['id'] = $data['id'];
                                         $_SESSION['email'] = $data['gmail'];
                                         $_SESSION['role'] = $data['role'];
-                                        header('Refresh:1 , url=../user/user.html');
+                                        header('Refresh:1 , url=../index.php'); 
                                     }
 
                                 } else {

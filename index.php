@@ -68,11 +68,11 @@
                             <a class="nav-link text-white small-font" href="#">Help</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <!-- <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-light " type="submit">Search</button>
                         
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </nav>
@@ -88,7 +88,7 @@
     </section>
 
     <!-- /============================Why Us/////============================ -->
-    <section id="about-us">
+     <!-- <section id="about-us">
         <div class="container about-parent">
 
             <div class="about-us-content">
@@ -103,7 +103,7 @@
             </div>
 
         </div>
-    </section>
+    </section> 
 
     <?php
         $sql = "SELECT * FROM category";
@@ -112,7 +112,7 @@
         {
               
         
-    ?>
+    ?> -->
     <!--=================  Types of books ======================= -->
     <section id="book-section" class="books">
         <!-- =================first-row for books================== -->
@@ -193,7 +193,7 @@
 
 
     <!-- ========================Testimonials========================= -->
-    <section id="testimonial">
+     <section id="testimonial">
         <h2>What our customer says?</h2>
         <div class="container testimonial-container">
             <div class="testimonial-1 review">
@@ -230,7 +230,7 @@
             </div>
 
         </div>
-    </section>
+    </section> 
 
     <!-- ===========================contect us-------------------  -->
     <!-- <section id="contact-us">
@@ -293,6 +293,7 @@
 
             </div>
         </div>
+        
 
     </footer>
 

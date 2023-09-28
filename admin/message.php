@@ -8,7 +8,7 @@
    if($conn){
        //echo "Connection ok";
    }
-   else{
+   else{ 
        echo "Connection failed".mysqli_connect_error();
    }
 ?>

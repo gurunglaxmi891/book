@@ -284,6 +284,10 @@ section.header-content-section{
 .footer-icon i.middle{
     margin: 0 1rem;
 }
+.footer .center{
+    text-align: center;
+    margin-left: 25%;
+}
 /* =====================================Cart styling=================================== */
 nav i{
     color: #fff!important;

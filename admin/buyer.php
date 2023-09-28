@@ -93,7 +93,7 @@
                             </tr>
                         </thead>
                         <!-- ----------------------after table heading, now table body -------------------->
-                        <tbody>
+                        <tbody>  
                             <?php
                                 $sql = "SELECT * FROM user WHERE role='user' ";
                                 $result = mysqli_query($con , $sql);
